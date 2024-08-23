@@ -2,13 +2,32 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>Basic AR.js Example</title>
+    <script src="style.css"></script>
     <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/AR-js-org/AR.js@3.3.2/aframe/build/aframe-ar.js"></script>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+        }
+    
+        a-scene {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+    
 </head>
 <body style="margin: 0; overflow: hidden;">
-    <a-scene embedded arjs="sourceType: webcam; trackingMethod: best;">
+    <a-scene embedded arjs="sourceType: webcam; trackingMethod: best;" vr-mode-ui="enabled: false">
         
         <!-- Use default 'hiro' marker -->
         <a-marker preset="hiro">
@@ -17,7 +36,7 @@
         </a-marker>
 
         <!-- Camera -->
-        <a-entity camera></a-entity>
+        <a-entity camera position="0 1.6 0"></a-entity>
     </a-scene>
 </body>
 </html>

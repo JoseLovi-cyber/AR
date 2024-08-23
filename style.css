@@ -1,0 +1,7 @@
+@media (max-width: 600px) {
+    a-scene {
+        /* Adjustments for smaller screens */
+        width: 100%;
+        height: 100%;
+    }
+}
